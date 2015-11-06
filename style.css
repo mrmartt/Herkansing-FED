@@ -1,0 +1,185 @@
+/*box sizing wordt gebruikt om aan te geven wat de machine moet laten zien*/
+
+* {
+    box-sizing: border-box;
+}
+/*flexbox wordt gebruikt om het op de goede plek te krijgen binnen de pagina*/
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    background: #FFFFFF;
+    padding: 20px;
+    font-family: Trebuchet, Verdana, sans-serif;
+    font-size: 1em;
+    text-size-adjust: auto;
+}
+body > header {
+    order: 1;
+    width: 100%;
+    background: #339900;
+    padding: inherit;
+    position: top;
+}
+header> img {
+    height: 10em;
+    float: right;
+    padding: 10px, 10px;
+    transition: .5s;
+}
+main {
+    order: 3;
+    width: 40em;
+    flex-grow: .5;
+    background: white;
+    padding: inherit;
+    font-size: 1em;
+}
+body> section {
+    order: 4;
+    width: 20em;
+    background: beige;
+    padding: inherit;
+    color: black;
+}
+aside {
+    order: 2;
+    width: 20em;
+    background: beige;
+    padding: inherit;
+    color: black;
+}
+body> footer {
+    order: 5;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: sandybrown;
+    padding: inherit;
+}
+body> footer> section {
+    padding: 10px;
+    width: 100%;
+}
+body> footer> p {
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 0 2em .1em rgba(255, 255, 0, 25);
+}
+nav ul li {
+    order: 2;
+    display: inline-block;
+    list-style-type: none;
+    font-family: Verdana, sans-serif;
+    font-size: 1.5em;
+    padding: inherit;
+}
+li {
+    list-style-type: none;
+}
+@media only screen and (max-width: 800px) {
+    nav > ul > li {
+        display: block;
+    }
+    .cmd-logo {
+        display: none;
+    }
+    header > p {
+        display: none;
+    }
+}
+@media all and (max-width: 1280px) {
+    body> section {
+        flex: 1 100%;
+    }
+    aside {
+        flex: 1 100%;
+    }
+    .cmd-logo {
+        display: none;
+    }
+    nav li ul {
+        display: block;
+        text-align: left;
+    }
+    header > p {
+        display: none;
+    }
+    aside {
+        order: 3;
+        background-color: sandybrown;
+    }
+    main {
+        order: 2;
+        width: 100%;
+    }
+    video {
+        width: 100%;
+    }
+}
+
+
+
+/* hij geeft alle media weer bij een minimale beeldscherm width van 1000px*/
+
+@media all and (min-width: 1000px) {
+    body> footer {
+        flex-flow: nowrap
+    }
+}
+}
+a {
+    color: blue;
+    width: 20em;
+}
+a:hover {
+    color: black;
+}
+h1 {
+    color: navy;
+}
+header + footer {
+    background-color: #339900;
+    color: white;
+}
+input[type="search"] {
+    border-color: palevioletred;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: Trebuchet, Verdana, monospace;
+}
+.is-invisible {
+    display: none;
+}
+.is-visible {
+    display: block;
+}
+picture {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+video {
+    display: block;
+    margin: 0 auto;
+}
+.related {
+    width: 20em;
+    background: beige;
+    padding: inherit;
+    color: black;
+}
+img {
+    width: 100%;
+}
+.cmd-logo {
+    width: auto;
+}
+@media screen and (min-width:90em) {
+    body{
+        font-size: 100%;
+    }
+
+}
